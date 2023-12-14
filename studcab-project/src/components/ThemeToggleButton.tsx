@@ -16,10 +16,10 @@ const ThemeToggleButton = () => {
   return (
     <button
       onClick={() => setDark((prev) => !prev)}
-      className="relative flex items-center justify-center w-10 h-10 rounded-md sm:hover:bg-soft-black-hover-100 group">
+      className="relative flex items-center justify-center w-10 h-10 rounded-md sm:dark:hover:bg-soft-black-hover-200 sm:hover:bg-soft-white-hover group">
       {dark && <MdSunny className="text-2xl" />}
       {!dark && <FaMoon className="text-xl" />}
-      <Hint arrowDirection="up">Change to {dark ? "light" : "dark"}</Hint>
+      <Hint arrowDirection="down">Change to {dark ? "light" : "dark"}</Hint>
     </button>
   );
 };
