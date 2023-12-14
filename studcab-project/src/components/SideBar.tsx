@@ -18,7 +18,7 @@ const SideBar: FC<SideBarProps> = ({ setSideBarOpen }) => {
       ref={bgRef}
       onClick={onBgClick}
       className="absolute w-full h-full bg-black/80">
-      <div className="h-full w-[15rem] bg-soft-white"></div>
+      <div className="h-full w-[15rem] bg-soft-white dark:bg-soft-black-200"></div>
     </div>
   );
 };
