@@ -1,9 +1,9 @@
-const Home = () => {
+const RatingPage = () => {
   return (
     <div className="flex items-center justify-center w-full h-full font-semibold">
-      <p className="text-5xl">Home</p>
+      <p className="text-5xl">Rating</p>
     </div>
   );
 };
 
-export default Home;
+export default RatingPage;

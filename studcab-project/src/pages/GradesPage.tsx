@@ -1,9 +1,9 @@
-const Info = () => {
+const GradesPage = () => {
   return (
     <div className="flex items-center justify-center w-full h-full font-semibold">
-      <p className="text-5xl">Info</p>
+      <p className="text-5xl">Grades</p>
     </div>
   );
 };
 
-export default Info;
+export default GradesPage;
