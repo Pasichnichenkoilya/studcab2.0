@@ -1,13 +1,15 @@
 import { FC, useRef } from "react";
 import { Link } from "react-router-dom";
+
 import { FaHome } from "react-icons/fa";
 import { IoSchool } from "react-icons/io5";
 import { MdOutlineQueryStats } from "react-icons/md";
 import { FaUserCircle } from "react-icons/fa";
 import { IoCalendar } from "react-icons/io5";
 import { GiNotebook } from "react-icons/gi";
-import ThemeToggleButton from "./ThemeToggleButton";
+
 import LogoutButton from "./LogoutButton";
+import ThemeToggleButton from "./ThemeToggleButton";
 
 interface SideBarProps {
   setSideBarOpen: (value: boolean) => void;
@@ -62,8 +64,9 @@ const SideBar: FC<SideBarProps> = ({ setSideBarOpen }) => {
       className="absolute w-full h-full bg-black/80">
       <div className="h-full w-[15rem] bg-soft-white dark:bg-soft-black-200 flex flex-col text-soft-black-200 dark:text-soft-white select-none justify-between py-5">
         <div>
-          {buttons.map((btn) => (
+          {buttons.map((btn, index) => (
             <button
+              key={index}
               onClick={() => setSideBarOpen(false)}
               className="w-full h-10 px-5 text-left sm:dark:hover:bg-soft-black-hover-200 sm:hover:bg-soft-white-hover">
               <Link to={btn.href}>

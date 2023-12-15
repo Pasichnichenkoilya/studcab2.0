@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { Suspense, lazy, useState } from "react";
 import MenuButton from "./MenuButton";
-import SideBar from "./SideBar";
+
+const SideBar = lazy(() => import("./SideBar"));
 
 const Navbar = () => {
   const [sideBarOpen, setSideBarOpen] = useState(false);
@@ -10,7 +11,9 @@ const Navbar = () => {
       <div className="flex items-center px-3 bg-soft-black-100 text-soft-white">
         <MenuButton setSideBarOpen={setSideBarOpen} />
       </div>
-      {sideBarOpen && <SideBar setSideBarOpen={setSideBarOpen} />}
+      <Suspense>
+        {sideBarOpen && <SideBar setSideBarOpen={setSideBarOpen} />}
+      </Suspense>
     </>
   );
 };
