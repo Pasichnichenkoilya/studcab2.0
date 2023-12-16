@@ -13,7 +13,7 @@ const Layout = () => {
   return (
     <div className="h-[100dvh] grid grid-rows-[3.5rem,1fr]">
       <Navbar />
-      <div className="p-5 bg-soft-white dark:bg-soft-black-200 dark:text-soft-white text-soft-black-200">
+      <div className="overflow-hidden sm:p-5 bg-soft-white dark:bg-soft-black-200 dark:text-soft-white text-soft-black-200">
         <Suspense>
           <Outlet />
         </Suspense>

@@ -6,6 +6,8 @@ export default {
     extend: {
       colors: {
         "soft-white": "#F3F3F3",
+        "soft-green": "#217074",
+        "soft-green-hover": "#1B4251",
         "soft-white-hover": "#D4D4D4",
         "soft-black-100": "#343A40",
         "soft-black-200": "#202124",
