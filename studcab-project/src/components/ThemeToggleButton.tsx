@@ -3,7 +3,13 @@ import { MdSunny } from "react-icons/md";
 import { FaMoon } from "react-icons/fa";
 import Hint from "./Hint";
 
-const ThemeToggleButton = () => {
+type ThemeToggleButtonProps = {
+  hintArrowDirection?: "up" | "left" | "down" | "right";
+};
+
+const ThemeToggleButton = ({
+  hintArrowDirection = "down",
+}: ThemeToggleButtonProps) => {
   const [dark, setDark] = useState(localStorage.getItem("theme") === "dark");
 
   useEffect(() => {
@@ -19,7 +25,9 @@ const ThemeToggleButton = () => {
       className="relative flex items-center justify-center w-10 h-10 rounded-md sm:dark:hover:bg-soft-black-hover-200 sm:hover:bg-soft-white-hover group">
       {dark && <MdSunny className="text-2xl" />}
       {!dark && <FaMoon className="text-xl" />}
-      <Hint arrowDirection="down">Change to {dark ? "light" : "dark"}</Hint>
+      <Hint arrowDirection={hintArrowDirection}>
+        Change to {dark ? "light" : "dark"}
+      </Hint>
     </button>
   );
 };
