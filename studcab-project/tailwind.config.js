@@ -9,6 +9,7 @@ export default {
         "soft-green": "#217074",
         "soft-green-hover": "#1B4251",
         "soft-white-hover": "#D4D4D4",
+        "soft-white-hover-200": "#C2C2C2",
         "soft-black-100": "#343A40",
         "soft-black-200": "#202124",
         "soft-black-hover-100": "#22262A",

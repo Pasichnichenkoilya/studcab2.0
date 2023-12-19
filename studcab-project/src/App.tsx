@@ -8,6 +8,7 @@ const GradesPage = lazy(() => import("./pages/GradesPage"));
 const RatingPage = lazy(() => import("./pages/RatingPage"));
 const SchedulePage = lazy(() => import("./pages/SchedulePage"));
 const AssignmentsPage = lazy(() => import("./pages/AssignmentsPage"));
+const LoginPage = lazy(() => import("./pages/LoginPage"));
 
 const Layout = () => {
   return (
@@ -31,6 +32,14 @@ const App = () => {
 
   return (
     <Routes>
+      <Route
+        path="/login"
+        element={
+          <Suspense>
+            <LoginPage />
+          </Suspense>
+        }
+      />
       <Route path="/" element={<Layout />}>
         <Route path="/" element={<HomePage />} />
         <Route path="/info" element={<InfoPage />} />
